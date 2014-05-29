@@ -400,7 +400,7 @@ body.page #primary{float: none !important;}
  #colophon .wpcf7-form input[type="submit"]{background:#ffde17;}
  .wpcf7-form select{border:none;}
  .wpcf7-form select option{color:#414042;}
-#sub-floor{background: url(../images/bg-subfloor.jpg) repeat center center;padding:29px 0;}
+#sub-floor{background: url(../images/bg-subfloor.jpg) repeat-x center center;padding:29px 0;}
 #sub-floor p{margin:0;font-size: 72%;}
 #sub-floor ul li{float: left;list-style-type: none;margin-right:5px;border-right:1px solid #000;padding: 0 5px;}
 #sub-floor ul li a{color:#000;font-size: 80%;}
@@ -414,6 +414,7 @@ body.page #primary{float: none !important;}
    .wpcf7-form input[type="submit"]{width:50%;padding:15px;font-size: 135%;margin-top: 15px;}
 }
 @media only screen and (max-width: 767px){
+  .copyright{padding: 0 15px;}
   #colophon h2{text-align: left;}
   .wpcf7-form div{clear:both;float: none;margin:5px 0;}
   .wpcf7-form input[type="submit"]{display: block;font-size: 150%;padding: 2%;width: 50%;}
