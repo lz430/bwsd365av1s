@@ -515,7 +515,7 @@ article table th {
 .contact-directory > h1{font-size: 300%;color:#414042;}
 .contact-directory > h2{font-size: 160%;color:#414042;margin:25px 0;}
 .list{list-style-image: none;list-style: none;margin:10px 0;}
-.office-box{padding:0;min-height:95px;margin-bottom: 20px;}
+.office-box{padding:0;min-height:110px;margin-bottom: 20px;}
 .office-box h2{font-size: 100%;margin:0;text-transform:none;font-weight: bold;}
 .office-box h4{font-size: 85%;margin:0 0 10px;color: #414042;text-transform:none;}
 /*.office-box .address{margin-top: 15px;}*/
