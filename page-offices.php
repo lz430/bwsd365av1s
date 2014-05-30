@@ -19,7 +19,7 @@ get_header(); ?>
                     O: <a href="tel:<?php the_field('office_number') ?>"><?php the_field('office_number') ?></a>
                   </div>
                   <?php if(get_field('office_fax') != ''){  ?>
-                    <div class="number">F: <?php the_field('office_fax') ?></div>
+                    <div class="number">C: <?php the_field('office_fax') ?></div>
                   <?php }else{} ?>
                   <div class="address">
                   <?php the_field('address') ?> <br>

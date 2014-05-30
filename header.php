@@ -94,6 +94,17 @@
                             'walker'            => new wp_bootstrap_navwalker())
                         );
                     ?>
+                    <?php
+                        wp_nav_menu( array(
+                            'theme_location'    => 'mobile-top',
+                            'depth'             => 2,
+                            'container'         => 'div',
+                            // 'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+                            'menu_class'        => 'nav navbar-nav',
+                            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                            'walker'            => new wp_bootstrap_navwalker())
+                        );
+                    ?>
                   </nav><!-- #site-navigation -->
                 </div>
                 <!-- <a href="#" class="top-slider"><span class="icon-arrow-up"></span> Kaufman Financial Group </a> -->
