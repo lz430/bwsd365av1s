@@ -49,7 +49,6 @@
       <?php echo do_shortcode('[contact-form-7 id="26" title="Footer contact form"]' ); ?>
     </div>
         </div> <!--end container-->
-  </footer><!-- #colophon -->
       <div id="sub-floor">
         <div class="row container">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -65,6 +64,7 @@
           </div>
       </div> <!--end row container-->
     </div> <!--end subfloor-->
+  </footer><!-- #colophon -->
 </div><!-- #page -->
 <script>
   jQuery(window).load(function(){
@@ -121,6 +121,29 @@
   // jQuery('[data-toggle=offcanvas]').click(function () {
   //   jQuery('.row-offcanvas').toggleClass('active')
   // });
+
+  // Sticky footer stuff
+  function positionFooter() {
+    var mFoo = jQuery("#colophon");
+    if (((jQuery(document.body).height() + mFoo.outerHeight()) < jQuery(window).height() && mFoo.css("position") == "fixed") || (jQuery(document.body).height() < jQuery(window).height() && mFoo.css("position") != "fixed")) {
+        mFoo.css({
+            position: "fixed",
+            bottom: "0px",
+            width: "100%"
+        });
+    } else {
+        mFoo.css({
+            position: "static"
+        });
+    }
+}
+    positionFooter();
+    jQuery(window).scroll(positionFooter);
+    jQuery(window).resize(positionFooter);
+    jQuery(window).load(positionFooter);
+
+
+
 });
 </script>
 <?php wp_footer(); ?>

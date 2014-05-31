@@ -93,7 +93,7 @@
                             'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                             'walker'            => new wp_bootstrap_navwalker())
                         );
-                    ?>fadsf
+                    ?>
                   </nav><!-- #site-navigation -->
                 </div>
                 <!-- <a href="#" class="top-slider"><span class="icon-arrow-up"></span> Kaufman Financial Group </a> -->

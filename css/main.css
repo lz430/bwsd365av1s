@@ -378,7 +378,7 @@ body.page #primary{float: none !important;}
 }
 /* 8. Footer 
 ------------------------------------------------------- */
-#colophon {background: #231f20;padding: 10px 0;border-top: solid 15px #ffde17;margin-top:25px;}
+#colophon {background: #231f20;padding: 10px  0 0;border-top: solid 15px #ffde17;margin-top:25px;}
 #colophon .container{padding: 0;}
 #footertext {float: right;text-align: right;}
 #colophon .main_logo{max-width: 300px;}
