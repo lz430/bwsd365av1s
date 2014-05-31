@@ -590,3 +590,16 @@ body.post-type-archive-news  article h3 a{font-size: 90% !important;}
     width: 50%; /* 6 columns */
   }
 }
+
+/*###################################
+#######Mobile Menu Media Queries########
+###################################
+*/
+@media screen and (min-width: 768px) {
+  #menu-mobile-top-menu{display: none;}
+  #menu-main-top{display: block;}
+}
+@media screen and (max-width: 767px) {
+  #menu-mobile-top-menu{display: block;}
+  #menu-main-top, #menu-secondary-top{display:none ;}
+}

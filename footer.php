@@ -81,17 +81,6 @@
       });
     }
   jQuery(document).ready(function(){
-    var secondary_menu = jQuery("#menu-secondary-top").html();
-    
-      var width = jQuery(window).width();
-      if(width < 767){
-          jQuery("#menu-main-top").prepend(secondary_menu);
-          jQuery("#menu-secondary-top").hide();
-          jQuery("#menu-main-top li").each(function(){
-            jQuery(this).removeClass("col-lg-4 col-md-4 col-sm-12 col-xs-12");
-        });
-    }
-    
     //Slide down
     jQuery("#top-slider").hide();
     jQuery(".top-slider, .btn-close").click(function(){
