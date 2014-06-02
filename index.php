@@ -94,31 +94,15 @@ get_header(); ?>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 secondary-box">
           <h2>Resources</h2>
            <ul class="resources-container">
-            <li class="news-item">
-              <h4>Enterprise Sales Sheet</h4>
-              <a href="<?php the_permalink(); ?>" class="btn-black">Download</a>
-            </li>
-             <li class="news-item">
-              <h4>Solutions Brochure</h4>
-              <a href="<?php the_permalink(); ?>" class="btn-black">Download</a>
-            </li>
-             <li class="news-item">
-              <h4>Enterprise Sales Sheet</h4>
-              <a href="<?php the_permalink(); ?>" class="btn-black">Download</a>
-            </li>
-             <li class="news-item">
-              <h4>Enterprise Sales Sheet</h4>
-              <a href="<?php the_permalink(); ?>" class="btn-black">Download</a>
-            </li>
-            <!-- <?php 
+            <?php 
               query_posts( array ( 'category_name' => 'home', 'posts_per_page' => 4, 'post_type' => 'resources' ) );
               while ( have_posts() ) : the_post(); 
               ?>
               <li class="resources-item">
                 <h4><?php the_title(); ?></h4>
-                <a href="<?php the_permalink(); ?>" class="btn-black">Download</a>
+                <a href="<?php the_field('resource_link'); ?>" class="btn-black" target="_blank">Download</a>
               </li>
-            <?php endwhile; ?> -->
+            <?php endwhile; ?>
           </ul>
           <?php wp_reset_query(); ?>
         </div> <!-- .secondary-box -->

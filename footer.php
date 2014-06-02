@@ -131,7 +131,9 @@
     jQuery(window).resize(positionFooter);
     jQuery(window).load(positionFooter);
 
-
+jQuery('.navbar-toggle').click(function () {
+  jQuery('.row-offcanvas').toggleClass('active')
+});
 
 });
 </script>

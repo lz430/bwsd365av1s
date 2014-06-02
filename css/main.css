@@ -191,7 +191,7 @@ div.slide-description {
   }
 }
 /*Under the slider*/
-.directory-container{padding:7px 0;background: #fff;min-height: 78px;}
+.directory-container{padding-top:7px; padding-bottom: 7px;background: #fff;min-height: 78px;}
 .yellow-strip, .black-strip, .directory-container .bg-blue{float: left;padding: 22.5px 0;position: relative;}
 .yellow-strip{background: #ffde17;}
 .black-strip{background:url(../images/bg-yellow-arrow.png) no-repeat left center #231f20;padding-left: 60px;}
@@ -213,6 +213,7 @@ div.slide-description {
     .yellow-strip div, .black-strip div{float: left;margin:-left:0;}
     .yellow-strip div{margin-left: 25px;}
     .black-strip{background: #231f20;padding-left:20px;}
+    .directory-container{margin-left: 15px;padding-left: 0;}
   }
 /*Overriding Nivo controls*/
 .theme-default .nivoSlider{margin-bottom: 13px;}
@@ -557,40 +558,6 @@ aside .top-staff a{color:#fff;}
 article .entry-meta .btn-yellow{float: right;font-size: 120%;margin-top: 10px;clear:both;}
 body.post-type-archive-news  article h3{line-height: 14px;text-transform: none;}
 body.post-type-archive-news  article h3 a{font-size: 90% !important;}
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all .25s ease-out;
-       -moz-transition: all .25s ease-out;
-            transition: all .25s ease-out;
-  }
-  .row-offcanvas-right {
-    right: 0;
-  }
-  .row-offcanvas-left {
-    left: 0;
-  }
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -50%; /* 6 columns */
-  }
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -50%; /* 6 columns */
-  }
-  .row-offcanvas-right.active {
-    right: 50%; /* 6 columns */
-  }
-  .row-offcanvas-left.active {
-    left: 50%; /* 6 columns */
-  }
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 50%; /* 6 columns */
-  }
-}
-
 /*###################################
 #######Mobile Menu Media Queries########
 ###################################
@@ -603,3 +570,22 @@ body.post-type-archive-news  article h3 a{font-size: 90% !important;}
   #menu-mobile-top-menu{display: block;}
   #menu-main-top, #menu-secondary-top{display:none ;}
 }
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+       -moz-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+  .row-offcanvas-right {right: 0;}
+  .row-offcanvas-left {left: 0;}
+  .row-offcanvas-right.sidebar-offcanvas {right: -50%; /* 6 columns */}
+  .row-offcanvas-left.sidebar-offcanvas {left: -50%; /* 6 columns */}
+  .row-offcanvas-right.active {right: 50%; /* 6 columns */}
+  .row-offcanvas-left.active {left: 50%; /* 6 columns */}
+  .sidebar-offcanvas {background-color: #504C4D;height: 100%;left: -50%;padding: 0;position: absolute;top: 0;width: 50%;}
+}
+#menu-mobile-top-menu{width:50%;margin-left:3%;}
+#menu-mobile-top-menu li {}
+#menu-mobile-top-menu li a{display: block;color:#fff;}
+#menu-mobile-top-menu  > li > a:hover, #menu-mobile-top-menu  > li > a:focus{background-color: #0072BC;}
