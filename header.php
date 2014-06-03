@@ -10,17 +10,21 @@
     <head>
       <meta charset="<?php bloginfo( 'charset' ); ?>">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title><?php wp_title( '|', true, 'right' ); ?></title>
       <link rel="profile" href="http://gmpg.org/xfn/11">
       <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
       <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/animate.css">
-      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/modernizr.min.js"></script>
+      <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/css3-mediaqueries.js"></script>
       <?php wp_head(); ?>
+       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie8.css">
+        <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
+        <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/respond.min.js"></script>
+      <![endif]-->
     </head>
     <body <?php body_class(); ?>>
       <div id="page" class="hfeed site row-offcanvas row-offcanvas-left">
