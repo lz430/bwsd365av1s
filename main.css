@@ -159,7 +159,7 @@ a:active {
 /* 5. Slider
 -------------------------------------------------*/
 .theme-default .nivoSlider{margin-bottom: 0;}
-.ribbon{background: url(../images/bg-slider-menu.png) no-repeat top center;height: 146px;}
+.ribbon{background: #252525 /*url(../images/bg-slider-menu.png) no-repeat top center;height: 146px;}*/
 .slider-wrapper {margin: 15px auto auto;}
 .slide-title {
   font-family: "railwayregular", Helvetica, Arial, sans-serif
