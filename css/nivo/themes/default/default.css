@@ -25,11 +25,12 @@ Supports Thumbs: true
 }
 
 .theme-default .nivo-controlNav {
-	text-align: center;
-	padding: 0;
-	padding-top: 20px;
-	position: relative;
-	top: -15px;
+    bottom: -60px;
+    left: 0;
+    /*padding: 20px 0 0;*/
+    position: relative;
+    text-align: center;
+    z-index: 999;
 }
 .theme-default .nivo-controlNav a {
 	display:inline-block;

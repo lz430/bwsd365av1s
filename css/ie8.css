@@ -1,25 +1,49 @@
-h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase;
-}
-h1, .h1 {
-    font-size: 36px;
-}
-h1, h2, h3 {
-    margin-bottom: 10px;
-    margin-top: 20px;
-}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "railwayregular",Helvetica,Arial,sans-serif;
-    font-weight: 500;
-    line-height: 1.1;
-}
-
-#menu-main-top{float: right;width:100%;display: block;}
-#menu-secondary-top,
-#menu-secondary-top li a{width:100%;}
-
-.site-title{margin-top:15px;}
-.yellow-strip{padding:14.5px 0;}
-.office-box.team{height:135px;}
-#menu-secondary-top{height: 75px;margin-top:76px;}
+body, h1, h2, h3, h4, h5, h6, a, p, div, *{font-family: Arial, sans-serif;}
+h1, h2, h3, h4, h5, h6 {text-transform: uppercase;}
+h1, .h1 {font-size: 36px;}
+h1, h2, h3 {margin-bottom: 10px;margin-top: 20px;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {font-weight: 500;line-height: 1.1;}
+#top-slider .col-sm-6{float: left;width:50%;}
+#menu-main-top, .collapse{display: block;}
+#menu-main-top{float: right;width:100%;}
+#menu-mobile-top-menu{display: block;width:100%;}
+#menu-mobile-top-menu li {float:left;display: block;}
+#menu-secondary-top,
+#menu-secondary-top li a{width:100%;}
+
+.content-area.col-lg-8{width:66.6667%;float: left;}
+#secondary.col-md-4{width:33.3333%;float: left;}
+.site-title{margin-top:15px;}
+/*home page slider*/
+.slider-wrapper .row.container{position: relative;z-index: 3000;}
+.theme-default .nivo-controlNav, .nivo-controlNav{position: absolute;z-index: 999;left:11px;}
+.yellow-strip{width:50%;}
+.black-strip{width:50%;}
+.directory-container{padding-bottom: 0;}
+.office-box{float: left;width:25%;}
+.office-box.team{height:135px;}
+.site-main .bg-yellow.contact-directory{width:100%;float:none;}
+.site-branding .col-md-4{width:33%;float: left;}
+.site-branding .col-md-8{width:66%;float: left;}
+#menu-secondary-top{height: 75px;margin-top:76px;display: table;}
+#menu-secondary-top li.menu-item{float: left;clear:none;width:33.333333%;display: table-cell;vertical-align: bottom;}
 .cust-prod .trans-blk h4{margin: 15px 0;}
+
+.cust-prod{width:100%;float:left;clear:both;}
+.cust-prod > div, .secondary-box{width:50% !important;float: left;}
+
+.wpcf7-form .col-lg-6{float: left;width:50%;}
+/*body.page-template-page-offices-php .site-content .content-area{float: left;}*/
+.site-content #secondary{width:33.3333% !important;float: left;}
+.top-staff, .contact-directory{width:100%;}
+
+.col-lg-4{width:33.3333%;float: left;}
+.col-lg-2{width:16.6667%;float: left;}
+.col-lg-6{width:50%;float: left;}
+
+
+/*###########################
+#######DON'T DISPLAY########
+###########################
+*/
+.navbar-toggle, .cust-prod .no-pad, #menu-mobile-top-menu{display: none;}

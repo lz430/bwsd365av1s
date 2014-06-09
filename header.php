@@ -23,7 +23,7 @@
       <!--[if lt IE 9]>
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie8.css">
         <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-        <script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/respond.min.js"></script>
+        <script type='text/javascript' src="<?php //echo get_template_directory_uri(); ?>/js/respond.min.js"></script>
       <![endif]-->
     </head>
     <body <?php body_class(); ?>>
@@ -192,7 +192,7 @@
             } //ending if
           } // ending if
         ?>
-        <div class="nivo-controlNav"></div>
+        <!-- <div class="nivo-controlNav"></div> -->
       </div>
     </div><!--end .row.container-->
   <div class="row ">
