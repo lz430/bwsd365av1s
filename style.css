@@ -227,8 +227,7 @@ input {
 }
 button,
 html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type="reset"]{
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	font-size: 12px;
@@ -264,6 +263,7 @@ input[type="search"] {
 	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
 	-moz-box-sizing:    content-box;
 	box-sizing:         content-box;
+	border:1px solid #ccc;padding:10px;font:normal 15px/15px 'Arial', sans-serif;
 }
 input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
 	-webkit-appearance: none;
@@ -277,7 +277,6 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"],
 textarea {
 	color: #666;
 	border: 0;
@@ -293,8 +292,7 @@ textarea:focus {
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"],
-input[type="search"] {
+input[type="password"]{
 	padding: 3px;
 }
 textarea {
@@ -511,6 +509,7 @@ object {
 	display: none;
 }
 
+.search-field{}
 
 /* =Infinite Scroll
 ----------------------------------------------- */

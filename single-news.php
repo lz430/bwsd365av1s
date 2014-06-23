@@ -14,7 +14,7 @@ get_header(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <header class="entry-header">
             <h3 class="entry-title"><?php the_title(); ?></h3>
-            <div class="categories">
+            <div class="categories" >
               <?php $parentscategory ="";
                 foreach((get_the_category()) as $category) {
                   if ($category->category_parent != 0) {
