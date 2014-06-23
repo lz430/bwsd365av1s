@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Blain
+ * @package burnsWilcox
  */
 get_header(); ?>
   <section id="primary" class="content-area col-md-8">
@@ -14,22 +14,22 @@ get_header(); ?>
       
        <?php
               /* translators: used between list items, there is a space after the comma */
-              $category_list = get_the_category_list( __( ' | ', 'blain' ) );
+              $category_list = get_the_category_list( __( ' | ', 'burnsWilcox' ) );
               /* translators: used between list items, there is a space after the comma */
-              $tag_list = get_the_tag_list( '', __( ' | ', 'blain' ) );
-              if ( ! blain_categorized_blog() ) {
+              $tag_list = get_the_tag_list( '', __( ' | ', 'burnsWilcox' ) );
+              if ( ! burnsWilcox_categorized_blog() ) {
                 // This blog only has 1 category so we just need to worry about tags in the meta text
                 if ( '' != $tag_list ) {
-                  $meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'blain' );
+                  $meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'burnsWilcox' );
                 } else {
-                  $meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'blain' );
+                  $meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'burnsWilcox' );
                 }
               } else {
                 // But this blog has loads of categories so we should probably display them here
                 if ( '' != $tag_list ) {
-                  $meta_text = __( 'Also in:  %1$s and tagged %2$s.', 'blain' );
+                  $meta_text = __( 'Also in:  %1$s and tagged %2$s.', 'burnsWilcox' );
                 } else {
-                  $meta_text = __( 'Also in: %1$s.', 'blain' );
+                  $meta_text = __( 'Also in: %1$s.', 'burnsWilcox' );
                 }
               } // end check for categories on this blog
             ?>
@@ -63,7 +63,7 @@ get_header(); ?>
         </article><!-- #post-## -->
         <div class="clearfix"></div>
       <?php endwhile; ?>
-      <?php blain_content_nav( 'nav-below' ); ?>
+      <?php burnsWilcox_content_nav( 'nav-below' ); ?>
     <?php else : ?>
       <?php get_template_part( 'no-results', 'archive' ); ?>
     <?php endif; ?>

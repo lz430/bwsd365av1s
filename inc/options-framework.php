@@ -144,10 +144,10 @@ function optionsframework_setdefaults() {
 function optionsframework_menu_settings() {
 
 	$menu = array(
-		'page_title' => __( 'Blain Theme Options', 'optionsframework'),
-		'menu_title' => __('Blain Settings', 'optionsframework'),
+		'page_title' => __( 'burnsWilcox Theme Options', 'optionsframework'),
+		'menu_title' => __('burnsWilcox Settings', 'optionsframework'),
 		'capability' => 'edit_theme_options',
-		'menu_slug' => 'Blain-options',
+		'menu_slug' => 'burnsWilcox-options',
 		'callback' => 'optionsframework_page'
 	);
 
@@ -374,8 +374,8 @@ function optionsframework_adminbar() {
 	$wp_admin_bar->add_menu( array(
 			'parent' => 'appearance',
 			'id' => 'of_theme_options',
-			'title' => __( 'Blain Settings', 'options_framework_theme' ),
-			'href' => admin_url( 'themes.php?page=Blain-options' )
+			'title' => __( 'burnsWilcox Settings', 'options_framework_theme' ),
+			'href' => admin_url( 'themes.php?page=burnsWilcox-options' )
 		));
 }
 

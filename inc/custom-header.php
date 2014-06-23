@@ -12,39 +12,39 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package Blain
+ * @package burnsWilcox
  */
 
 /**
  * Setup the WordPress core custom header feature.
  *
- * @uses blain_header_style()
- * @uses blain_admin_header_style()
- * @uses blain_admin_header_image()
+ * @uses burnsWilcox_header_style()
+ * @uses burnsWilcox_admin_header_style()
+ * @uses burnsWilcox_admin_header_image()
  *
- * @package Blain
+ * @package burnsWilcox
  */
-function blain_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'blain_custom_header_args', array(
+function burnsWilcox_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'burnsWilcox_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'blain_header_style',
-		'admin-head-callback'    => 'blain_admin_header_style',
-		'admin-preview-callback' => 'blain_admin_header_image',
+		'wp-head-callback'       => 'burnsWilcox_header_style',
+		'admin-head-callback'    => 'burnsWilcox_admin_header_style',
+		'admin-preview-callback' => 'burnsWilcox_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'blain_custom_header_setup' );
+add_action( 'after_setup_theme', 'burnsWilcox_custom_header_setup' );
 
-if ( ! function_exists( 'blain_header_style' ) ) :
+if ( ! function_exists( 'burnsWilcox_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see blain_custom_header_setup().
+ * @see burnsWilcox_custom_header_setup().
  */
-function blain_header_style() {
+function burnsWilcox_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -76,15 +76,15 @@ function blain_header_style() {
 	</style>
 	<?php
 }
-endif; // blain_header_style
+endif; // burnsWilcox_header_style
 
-if ( ! function_exists( 'blain_admin_header_style' ) ) :
+if ( ! function_exists( 'burnsWilcox_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see blain_custom_header_setup().
+ * @see burnsWilcox_custom_header_setup().
  */
-function blain_admin_header_style() {
+function burnsWilcox_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -104,15 +104,15 @@ function blain_admin_header_style() {
 	</style>
 <?php
 }
-endif; // blain_admin_header_style
+endif; // burnsWilcox_admin_header_style
 
-if ( ! function_exists( 'blain_admin_header_image' ) ) :
+if ( ! function_exists( 'burnsWilcox_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see blain_custom_header_setup().
+ * @see burnsWilcox_custom_header_setup().
  */
-function blain_admin_header_image() {
+function burnsWilcox_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -124,4 +124,4 @@ function blain_admin_header_image() {
 	</div>
 <?php
 }
-endif; // blain_admin_header_image
+endif; // burnsWilcox_admin_header_image

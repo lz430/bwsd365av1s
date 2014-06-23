@@ -338,7 +338,7 @@ function optionsframework_options() {
 	'type' => 'heading');
 	
 	$options[] = array(
-		'desc' => __('Blain WordPress theme has been Designed and Created by <a href="http://InkHive.com" target="_blank">Rohit Tripathi</a>. For any Queries or help regarding this theme, <a href="http://inkhive.com/forums/section/theme-support/blain/" target="_blank">use the support forums.</a> You can also ask questions about this theme on WordPress.org Support Forums. I will answer your queries there too.', 'options_framework_theme'),
+		'desc' => __('burnsWilcox WordPress theme has been Designed and Created by <a href="http://InkHive.com" target="_blank">Rohit Tripathi</a>. For any Queries or help regarding this theme, <a href="http://inkhive.com/forums/section/theme-support/burnsWilcox/" target="_blank">use the support forums.</a> You can also ask questions about this theme on WordPress.org Support Forums. I will answer your queries there too.', 'options_framework_theme'),
 		'type' => 'info');	
 		
 	 $options[] = array(
@@ -347,16 +347,16 @@ function optionsframework_options() {
 	
 	$options[] = array(
 		'name' => __('Live Demo Blog', 'options_framework_theme'),
-		'desc' => __('For your convenience, we have created a <a href="http://demo.inkhive.com/blain/" target="_blank">Live Demo Blog</a> of the theme, Blain. You can take a look at and find out how your site would look once complete.', 'options_framework_theme'),
+		'desc' => __('For your convenience, we have created a <a href="http://demo.inkhive.com/burnsWilcox/" target="_blank">Live Demo Blog</a> of the theme, burnsWilcox. You can take a look at and find out how your site would look once complete.', 'options_framework_theme'),
 		'type' => 'info');	
 	
 	$options[] = array(
 		'name' => __('Regenerating Post Thumbnails', 'options_framework_theme'),
-		'desc' => __('If you are using blain Theme on a New Wordpress Installation, then you can skip this section.<br />But if you have just switched to this theme from some other theme, or just updated to the current version of blain, then you are requested regenerate all the post thumbnails. It will fix all the issues you are facing with distorted & ugly homepage thumbnail Images. ', 'options_framework_theme'),
+		'desc' => __('If you are using burnsWilcox Theme on a New Wordpress Installation, then you can skip this section.<br />But if you have just switched to this theme from some other theme, or just updated to the current version of burnsWilcox, then you are requested regenerate all the post thumbnails. It will fix all the issues you are facing with distorted & ugly homepage thumbnail Images. ', 'options_framework_theme'),
 		'type' => 'info');	
 		
 	$options[] = array(
-		'desc' => __('To Regenerate all Thumbnail images, Install and Activate the <a href="http://wordpress.org/plugins/regenerate-thumbnails/" target="_blank">Regenerate Thumbnails</a> WP Plugin. Then from <strong>Tools &gt; Regen. Thumbnails</strong>, re-create thumbnails for all your existing images. And your blog will look even more stylish with Blain theme.<br /> ', 'options_framework_theme'),
+		'desc' => __('To Regenerate all Thumbnail images, Install and Activate the <a href="http://wordpress.org/plugins/regenerate-thumbnails/" target="_blank">Regenerate Thumbnails</a> WP Plugin. Then from <strong>Tools &gt; Regen. Thumbnails</strong>, re-create thumbnails for all your existing images. And your blog will look even more stylish with burnsWilcox theme.<br /> ', 'options_framework_theme'),
 		'type' => 'info');	
 		
 			

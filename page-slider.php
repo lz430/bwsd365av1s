@@ -8,7 +8,7 @@
  * different template.
  * Template Name: Default Template with Slider
  *
- * @package Blain
+ * @package burnsWilcox
  */
 
 get_header(); ?>

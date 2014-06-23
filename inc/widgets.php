@@ -2,16 +2,16 @@
 /**
  * Custom Widgets for this theme.
  *
- * @package Blain
+ * @package burnsWilcox
  */
 
-class blain_Recent_Posts extends WP_Widget {
+class burnsWilcox_Recent_Posts extends WP_Widget {
 
 	public function __construct() {
 		parent::__construct(
-			'blain_rp', // Base ID
-			__('Blain Recent Posts', 'blain'), // Name
-			array( 'description' => __( 'Display your recent posts, with a Thumbnail.', 'blain' ), ) // Args
+			'burnsWilcox_rp', // Base ID
+			__('burnsWilcox Recent Posts', 'burnsWilcox'), // Name
+			array( 'description' => __( 'Display your recent posts, with a Thumbnail.', 'burnsWilcox' ), ) // Args
 		);
 	}
 
@@ -75,13 +75,13 @@ class blain_Recent_Posts extends WP_Widget {
 			$title = $instance[ 'title' ];
 		}
 		else {
-			$title = __( 'Latest Articles', 'blain' );
+			$title = __( 'Latest Articles', 'burnsWilcox' );
 		}
 		if ( isset( $instance[ 'no_of_posts' ] ) ) {
 			$no_of_posts = $instance[ 'no_of_posts' ];
 		}
 		else {
-			$no_of_posts = __( '5', 'blain' );
+			$no_of_posts = __( '5', 'burnsWilcox' );
 		}
 		?>
 		<p>
@@ -106,7 +106,7 @@ class blain_Recent_Posts extends WP_Widget {
 		
 	}
 }
-add_action( 'widgets_init', 'register_blain_widget' );  
-function register_blain_widget() {  
-    register_widget( 'Blain_Recent_Posts' );  
+add_action( 'widgets_init', 'register_burnsWilcox_widget' );  
+function register_burnsWilcox_widget() {  
+    register_widget( 'burnsWilcox_Recent_Posts' );  
 }  

@@ -45,8 +45,8 @@ This file is just a bunch of stuff I'm not using in this build.
          <!-- Footer code -->
          <?php if ( of_get_option('credit1', true) == 0 ) { ?>
     <div class="site-info col-md-5">
-      <?php do_action( 'blain_credits' ); ?>
-      <?php printf( __( 'Blain Theme by %1$s.', 'blain' ), '<a href="http://inkhive.com/" rel="designer">InkHive</a>' ); ?>
+      <?php do_action( 'burnsWilcox_credits' ); ?>
+      <?php printf( __( 'burnsWilcox Theme by %1$s.', 'burnsWilcox' ), '<a href="http://inkhive.com/" rel="designer">InkHive</a>' ); ?>
     </div><!-- .site-info -->
   <?php } ?>  
     <div id="footertext" class="col-md-7">
@@ -75,7 +75,7 @@ This file is just a bunch of stuff I'm not using in this build.
                * what author we're dealing with (if that is the case).
               */
               the_post();
-              printf( __( 'Author: %s', 'blain' ), '<span class="vcard">' . get_the_author() . '</span>' );
+              printf( __( 'Author: %s', 'burnsWilcox' ), '<span class="vcard">' . get_the_author() . '</span>' );
               /* Since we called the_post() above, we need to
                * rewind the loop back to the beginning that way
                * we can run the loop properly, in full.
@@ -83,31 +83,31 @@ This file is just a bunch of stuff I'm not using in this build.
               rewind_posts();
 
             elseif ( is_day() ) :
-              printf( __( 'Day: %s', 'blain' ), '<span>' . get_the_date() . '</span>' );
+              printf( __( 'Day: %s', 'burnsWilcox' ), '<span>' . get_the_date() . '</span>' );
 
             elseif ( is_month() ) :
-              printf( __( 'Month: %s', 'blain' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+              printf( __( 'Month: %s', 'burnsWilcox' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
             elseif ( is_year() ) :
-              printf( __( 'Year: %s', 'blain' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+              printf( __( 'Year: %s', 'burnsWilcox' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
             elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-              _e( 'Asides', 'blain' );
+              _e( 'Asides', 'burnsWilcox' );
 
             elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-              _e( 'Images', 'blain');
+              _e( 'Images', 'burnsWilcox');
 
             elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-              _e( 'Videos', 'blain' );
+              _e( 'Videos', 'burnsWilcox' );
 
             elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-              _e( 'Quotes', 'blain' );
+              _e( 'Quotes', 'burnsWilcox' );
 
             elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-              _e( 'Links', 'blain' );
+              _e( 'Links', 'burnsWilcox' );
 
             else :
-              _e( 'Archives', 'blain' );
+              _e( 'Archives', 'burnsWilcox' );
 
             endif;
           ?>
@@ -117,25 +117,25 @@ This file is just a bunch of stuff I'm not using in this build.
           <footer class="entry-meta">
     <?php
       /* translators: used between list items, there is a space after the comma */
-      $category_list = get_the_category_list( __( ', ', 'blain' ) );
+      $category_list = get_the_category_list( __( ', ', 'burnsWilcox' ) );
 
       /* translators: used between list items, there is a space after the comma */
-      $tag_list = get_the_tag_list( '', __( ', ', 'blain' ) );
+      $tag_list = get_the_tag_list( '', __( ', ', 'burnsWilcox' ) );
 
-      if ( ! blain_categorized_blog() ) {
+      if ( ! burnsWilcox_categorized_blog() ) {
         // This blog only has 1 category so we just need to worry about tags in the meta text
         if ( '' != $tag_list ) {
-          $meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'blain' );
+          $meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'burnsWilcox' );
         } else {
-          $meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'blain' );
+          $meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'burnsWilcox' );
         }
 
       } else {
         // But this blog has loads of categories so we should probably display them here
         if ( '' != $tag_list ) {
-          $meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'blain' );
+          $meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'burnsWilcox' );
         } else {
-          $meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'blain' );
+          $meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'burnsWilcox' );
         }
 
       } // end check for categories on this blog
@@ -148,5 +148,5 @@ This file is just a bunch of stuff I'm not using in this build.
       );
     ?>
 
-    <?php edit_post_link( __( 'Edit', 'blain' ), '<span class="edit-link">', '</span>' ); ?>
+    <?php edit_post_link( __( 'Edit', 'burnsWilcox' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-meta -->

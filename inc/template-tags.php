@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package Blain
+ * @package burnsWilcox
  */
 
-if ( ! function_exists( 'blain_content_nav' ) ) :
+if ( ! function_exists( 'burnsWilcox_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
  */
-function blain_content_nav( $nav_id ) {
+function burnsWilcox_content_nav( $nav_id ) {
 	global $wp_query, $post;
 
 	// Don't print empty markup on single pages if there's nowhere to navigate.
@@ -31,21 +31,21 @@ function blain_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'blain' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'burnsWilcox' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'blain' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'blain' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'burnsWilcox' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'burnsWilcox' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'blain' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'burnsWilcox' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'blain' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'burnsWilcox' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -53,22 +53,22 @@ function blain_content_nav( $nav_id ) {
 	</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
 	<?php
 }
-endif; // blain_content_nav
+endif; // burnsWilcox_content_nav
 
-if ( ! function_exists( 'blain_comment' ) ) :
+if ( ! function_exists( 'burnsWilcox_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  */
-function blain_comment( $comment, $args, $depth ) {
+function burnsWilcox_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 
 	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'blain' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'blain' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php _e( 'Pingback:', 'burnsWilcox' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'burnsWilcox' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -83,14 +83,14 @@ function blain_comment( $comment, $args, $depth ) {
 					<?php printf( '%s', sprintf( '<cite class="fn">%s</cite> on ', get_comment_author_link() ) ); ?>
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time datetime="<?php comment_time( 'c' ); ?>">
-							<?php printf( _x( '%1$s', '1: date', 'blain' ), get_comment_date() ); ?>
+							<?php printf( _x( '%1$s', '1: date', 'burnsWilcox' ), get_comment_date() ); ?>
 						</time>
 					</a>
-					<?php edit_comment_link( __( 'Edit', 'blain' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_comment_link( __( 'Edit', 'burnsWilcox' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'blain' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'burnsWilcox' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 
@@ -111,15 +111,15 @@ function blain_comment( $comment, $args, $depth ) {
 	<?php
 	endif;
 }
-endif; // ends check for blain_comment()
+endif; // ends check for burnsWilcox_comment()
 
-if ( ! function_exists( 'blain_the_attached_image' ) ) :
+if ( ! function_exists( 'burnsWilcox_the_attached_image' ) ) :
 /**
  * Prints the attached image with a link to the next attached image.
  */
-function blain_the_attached_image() {
+function burnsWilcox_the_attached_image() {
 	$post                = get_post();
-	$attachment_size     = apply_filters( 'blain_attachment_size', array( 1200, 1200 ) );
+	$attachment_size     = apply_filters( 'burnsWilcox_attachment_size', array( 1200, 1200 ) );
 	$next_attachment_url = wp_get_attachment_url();
 
 	/**
@@ -164,11 +164,11 @@ function blain_the_attached_image() {
 }
 endif;
 
-if ( ! function_exists( 'blain_posted_on' ) ) :
+if ( ! function_exists( 'burnsWilcox_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function blain_posted_on() {
+function burnsWilcox_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) )
 		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
@@ -180,7 +180,7 @@ function blain_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on"><i class="icon-time"> </i> %1$s</span> <span class="byline"> <i class="icon-user"> </i> %2$s</span>', 'blain' ),
+	printf( __( '<span class="posted-on"><i class="icon-time"> </i> %1$s</span> <span class="byline"> <i class="icon-user"> </i> %2$s</span>', 'burnsWilcox' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string
@@ -196,7 +196,7 @@ endif;
 /**
  * Returns true if a blog has more than 1 category
  */
-function blain_categorized_blog() {
+function burnsWilcox_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
 		// Create an array of all the categories that are attached to posts
 		$all_the_cool_cats = get_categories( array(
@@ -210,20 +210,20 @@ function blain_categorized_blog() {
 	}
 
 	if ( '1' != $all_the_cool_cats ) {
-		// This blog has more than 1 category so blain_categorized_blog should return true
+		// This blog has more than 1 category so burnsWilcox_categorized_blog should return true
 		return true;
 	} else {
-		// This blog has only 1 category so blain_categorized_blog should return false
+		// This blog has only 1 category so burnsWilcox_categorized_blog should return false
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in blain_categorized_blog
+ * Flush out the transients used in burnsWilcox_categorized_blog
  */
-function blain_category_transient_flusher() {
+function burnsWilcox_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'all_the_cool_cats' );
 }
-add_action( 'edit_category', 'blain_category_transient_flusher' );
-add_action( 'save_post',     'blain_category_transient_flusher' );
+add_action( 'edit_category', 'burnsWilcox_category_transient_flusher' );
+add_action( 'save_post',     'burnsWilcox_category_transient_flusher' );

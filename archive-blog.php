@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Blain
+ * @package burnsWilcox
  */
 
 get_header(); ?>
@@ -17,7 +17,7 @@ get_header(); ?>
     
 
       <?php endwhile; ?>
-      <?php blain_content_nav( 'nav-below' ); ?>
+      <?php burnsWilcox_content_nav( 'nav-below' ); ?>
     <?php else : ?>
       <?php get_template_part( 'no-results', 'archive' ); ?>
     <?php endif; ?>

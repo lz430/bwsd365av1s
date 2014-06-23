@@ -2,7 +2,7 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package Blain
+ * @package burnsWilcox
  */
 ?>
   <div id="secondary" class="widget-area col-md-3" role="complementary">

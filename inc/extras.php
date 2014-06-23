@@ -4,22 +4,22 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package Blain
+ * @package burnsWilcox
  */
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
-function blain_page_menu_args( $args ) {
+function burnsWilcox_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'blain_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'burnsWilcox_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
  */
-function blain_body_classes( $classes ) {
+function burnsWilcox_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -27,12 +27,12 @@ function blain_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'blain_body_classes' );
+add_filter( 'body_class', 'burnsWilcox_body_classes' );
 
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  */
-function blain_enhanced_image_navigation( $url, $id ) {
+function burnsWilcox_enhanced_image_navigation( $url, $id ) {
 	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
 		return $url;
 
@@ -42,12 +42,12 @@ function blain_enhanced_image_navigation( $url, $id ) {
 
 	return $url;
 }
-add_filter( 'attachment_link', 'blain_enhanced_image_navigation', 10, 2 );
+add_filter( 'attachment_link', 'burnsWilcox_enhanced_image_navigation', 10, 2 );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  */
-function blain_wp_title( $title, $sep ) {
+function burnsWilcox_wp_title( $title, $sep ) {
 	global $page, $paged;
 
 	if ( is_feed() )
@@ -63,8 +63,8 @@ function blain_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'blain' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'burnsWilcox' ), max( $paged, $page ) );
 
 	return $title;
 }
-add_filter( 'wp_title', 'blain_wp_title', 10, 2 );
+add_filter( 'wp_title', 'burnsWilcox_wp_title', 10, 2 );

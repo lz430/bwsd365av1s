@@ -2,7 +2,7 @@
 /**
  * The Sidebar for the blog/news section.
  *
- * @package Blain
+ * @package burnsWilcox
  */
 ?>
   <div id="secondary" class="widget-area col-md-4" role="complementary">

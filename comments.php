@@ -4,10 +4,10 @@
  *
  * The area of the page that contains both current comments
  * and the comment form. The actual display of comments is
- * handled by a callback to blain_comment() which is
+ * handled by a callback to burnsWilcox_comment() which is
  * located in the inc/template-tags.php file.
  *
- * @package Blain
+ * @package burnsWilcox
  */
 
 /*
@@ -26,36 +26,36 @@ if ( post_password_required() )
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'blain' ),
+				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'burnsWilcox' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'blain' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'blain' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'blain' ) ); ?></div>
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'burnsWilcox' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'burnsWilcox' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'burnsWilcox' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
 		<ol class="comment-list">
 			<?php
 				/* Loop through and list the comments. Tell wp_list_comments()
-				 * to use blain_comment() to format the comments.
+				 * to use burnsWilcox_comment() to format the comments.
 				 * If you want to override this in a child theme, then you can
-				 * define blain_comment() and that will be used instead.
-				 * See blain_comment() in inc/template-tags.php for more.
+				 * define burnsWilcox_comment() and that will be used instead.
+				 * See burnsWilcox_comment() in inc/template-tags.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'blain_comment' ) );
+				wp_list_comments( array( 'callback' => 'burnsWilcox_comment' ) );
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'blain' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'blain' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'blain' ) ); ?></div>
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'burnsWilcox' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'burnsWilcox' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'burnsWilcox' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
@@ -65,7 +65,7 @@ if ( post_password_required() )
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'blain' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'burnsWilcox' ); ?></p>
 	<?php endif; ?>
 	
 	
@@ -86,20 +86,20 @@ if ( post_password_required() )
 		
 		    'author' =>
 		      '<div class="form-group">' .
-		      '<label for="author">' . __( 'Name', 'blain' ) . '</label> ' .
+		      '<label for="author">' . __( 'Name', 'burnsWilcox' ) . '</label> ' .
 		      ( $req ? '<span class="required">*</span>' : '' ) .
 		      '<input id="author" name="author" class="form-control" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 		      '" size="30"' . $aria_req . ' /></div>',
 		
 		    'email' =>
-		      '<div class="form-group"><label for="email">' . __( 'Email', 'blain' ) . '</label> ' .
+		      '<div class="form-group"><label for="email">' . __( 'Email', 'burnsWilcox' ) . '</label> ' .
 		      ( $req ? '<span class="required">*</span>' : '' ) .
 		      '<input id="email" name="email" class="form-control" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
 		      '" size="30"' . $aria_req . ' /></div>',
 		
 		    'url' =>
 		      '<div class="form-group><label for="url">' .
-		      __( 'Website', 'blain' ) . '</label>' .
+		      __( 'Website', 'burnsWilcox' ) . '</label>' .
 		      '<input id="url" name="url" class="form-control" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
 		      '" size="30" /></div>'
 		    )
